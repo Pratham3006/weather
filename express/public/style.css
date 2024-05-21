@@ -1,0 +1,47 @@
+*{
+background-color: rgb(231, 199, 199);
+}
+.quoteBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.parent{
+    width: 500px;
+    min-height:100px ;
+    border: 2px solid white;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px rgb(22, 22, 22);
+    filter: blur(0.3px);
+    
+}
+.Quotes{
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+.button1{
+    height: 30px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+button{
+    background-color: aqua;
+    border-radius: 12px;
+    font-weight: 600;   
+    
+}
+.parent-items{
+    display: flex;
+    background: none;
+    flex-direction: column;
+    
+}

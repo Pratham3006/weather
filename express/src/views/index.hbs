@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="quoteBox">
+    <div class="parent">
+        <p1 style="display: inline; background: none; display: flex; justify-content: flex-start; font-size: 30px; font-weight: 20px; font-style: italic;">Quotes</p1>
+        <hr style=" background: black; height: 2px;">
+       
+        <div class="Quotes">
+            <p1 style="background: none;" id="texts"></p1>
+            <p1 style="background: none;" id="quotes"></p1>
+        </div>
+        <div class="button1">
+            <button id="newq">New Quotes {{pratham}}</button>
+        </div>
+
+    </div>
+    
+</div>
+<script>
+let realdata=" ";
+const value= document.getElementById("quotes");
+const textual=document.getElementById("texts");
+const newq=document.getElementById("newq");
+const getnewQuotes=()=>{
+    const rand=Math.floor(Math.random()*10);
+    value.innerText=`${realdata[rand].author}`;
+    textual.innerText=`${realdata[rand].text}`;
+}
+const getQuotes=async ()=>{
+
+    const api="https://type.fit/api/quotes";
+    try{
+    let data=await fetch(api);
+    realdata=await data.json();
+    }
+    catch(error){
+        console.log(error)
+
+    }
+    
+
+}
+newq.addEventListener('click', getnewQuotes);
+getQuotes();
+
+</script>
+
+</body>
+</html>

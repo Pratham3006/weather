@@ -1,0 +1,16 @@
+{
+    "product_id": "ABC123",
+    "name": "Smartphone",
+    "brand": "XYZ",
+    "price": 599.99,
+    "color": "Black",
+    "availability": true,
+    "specs": {
+      "screen_size": "6.5 inches",
+      "camera": "12 MP",
+      "storage": "128 GB",
+      "ram": "6 GB"
+    }
+  }
+
+  
